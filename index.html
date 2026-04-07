@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo de Bilhar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="controls">
+      <h1>🎱 Bilhar</h1>
+      <p>Direção do taco (0,1°) e intensidade de impacto.</p>
+
+      <label for="angleRange">Ângulo do taco</label>
+      <input id="angleRange" type="range" min="0" max="359.9" step="0.1" value="0" />
+      <input id="angleInput" type="number" min="0" max="359.9" step="0.1" value="0" />
+
+      <label for="powerRange">Intensidade</label>
+      <input id="powerRange" type="range" min="10" max="100" step="1" value="55" />
+
+      <button id="shootBtn">Tacada</button>
+      <div class="stats">
+        <span>Pontos: <strong id="score">0</strong></span>
+        <span>Bolas restantes: <strong id="remaining">6</strong></span>
+      </div>
+      <small>Dica: ajuste o ângulo e clique em <em>Tacada</em>.</small>
+    </section>
+
+    <section class="table-wrap">
+      <canvas id="table" width="920" height="500" aria-label="Mesa de bilhar"></canvas>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
